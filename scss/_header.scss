@@ -1,0 +1,75 @@
+@use "variable";
+
+header{
+   background-color: variable.$base-color;
+   color: #fff;
+   padding-left: 33px;
+   padding-right: 72px;
+   height: 90px;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 500;
+   @include variable.mq(tab){
+      padding-right: 40px;
+   }
+   @include variable.mq(){
+      height: 60px;
+      padding-left: 16px;
+      padding-right: 16px;
+   }
+}
+
+.header-inner{
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header-logo{
+   width: 116px;
+   @include variable.mq(){
+      width: 54px;
+   }
+}
+nav{
+   height: 100%;
+}
+.header-nav{
+   display: flex;
+   gap: 40px;
+   height: 100%;
+   @include variable.mq(){
+      gap: 20px;
+   }
+}
+
+.header-nav-item{
+   a{
+      font-family: variable.$font-en1;
+      font-size: 18px;
+      font-weight: 400;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+      height: 100%;
+      line-height: 90px;
+      position: relative;
+      @include variable.mq(){
+         line-height: 60px;
+         font-size: 14px;
+      }
+      span{
+         border-bottom: 2px solid transparent;
+         padding-bottom: 5px;
+         transition: all 0.3s;
+      }
+
+      &:hover{
+         span{
+            border-bottom: 2px solid variable.$key-color;
+         }
+      }
+   }
+}

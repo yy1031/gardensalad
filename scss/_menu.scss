@@ -1,0 +1,404 @@
+@use "variable";
+
+.menu{
+   padding: 72px;
+   background-color: variable.$base-color;
+   @include variable.mq(tab){
+      padding: 40px 32px;
+   }
+   @include variable.mq(){
+      padding: 24px 16px;
+   }
+   .section-title{
+      color: #fff;
+      span{
+         color: #fff;
+         &::after{
+            background-color: #fff;
+         }
+      }
+   }
+}
+
+.menu-inner{
+   padding: 80px 120px 100px;
+   border: 2px solid #fff;
+   @include variable.mq(tab){
+      padding: 80px 24px 80px;
+   }
+   @include variable.mq(){
+      padding: 32px 20px;
+   }
+}
+
+.menu-lead{
+   color: #fff;
+   text-align: center;
+   font-size: 18px;
+   margin-top: 32px;
+   @include variable.mq(){
+      font-size: 16px;
+      margin-top: 48px;
+   }
+}
+
+.menu-list{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 58px 32px;
+   max-width: 1080px;
+   margin: 54px auto 80px;
+   @include variable.mq(){
+      margin: 48px auto;
+      display: block;
+      max-width: 100%;
+   }
+}
+
+.menu-item{
+   width: calc((100% - 32px) / 2);
+   @include variable.mq(){
+      width: 100%;
+
+      & + & {
+         margin-top: 48px;
+      }
+   }
+}
+
+.menu-item.menu-item-recommend{
+   display: flex;
+   width: 100%;
+   max-width: 953px;
+   margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+   @include variable.mq(){
+      display: block;
+   }
+   .menu-text{
+      padding: 113px 20px 45px;
+      margin-left: -80px;
+      position: relative;
+      width: 62.1%;
+      height: 367px;
+      @include variable.mq(tab){
+         padding-top: 84px;
+         height: 330px;
+      }
+      @include variable.mq(){
+         width: 100%;
+         margin-left: 0;
+         height: auto;
+         margin-top: -36px;
+      }
+   }
+   .menu-img{
+      position: relative;
+      z-index: 50;
+      width: 47.3%;
+      height: auto;
+      margin: 0;
+      @include variable.mq(){
+         width: 100%;
+         margin-top: -30px;
+      }
+   }
+   .menu-tag{
+      position: absolute;
+      background-color: variable.$key-color;
+      font-size: 24px;
+      color: #fff;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 50px 14px;
+      line-height: 1.44;
+      z-index: 30;
+      @include variable.mq(tab){
+         font-size: 18px;
+         padding: 0 46px 14px;
+      }
+      @include variable.mq(){
+         font-size: 18px;
+         padding: 30px 50px 16px;
+         @include variable.mq(){
+            font-size: 12px;
+         }
+      }
+
+      span{
+         font-family: variable.$font-en2;
+         font-size: 14px;
+      }
+   }
+}
+.menu-text{
+   background: #fff;
+   text-align: center;
+   position: relative;
+   padding: 73px 20px 42px;
+   &::after{
+      position: absolute;
+      content: "";
+      width: calc(100% - 26px);
+      height: calc(100% - 26px);
+      top: 13px;
+      left: 13px;
+      border: 1px solid variable.$text;
+      z-index: 20;
+   }
+
+   @include variable.mq(){
+      padding: 58px 20px 42px;
+   }
+}
+
+.menu-item-2{
+
+   .menu-img{
+      margin-left: 49px;
+      margin-right: 59px;
+      position: relative;
+      z-index: 50;
+      @include variable.mq(tab){
+         margin-left: 22px;
+         margin-right: 28px;
+      }
+      @include variable.mq(){
+         margin: 0;
+      }
+
+   }
+   .menu-text{
+      position: relative;
+      margin-top: -76px;
+      @include variable.mq(){
+         margin-top: -56px;
+      }
+   }
+}
+
+.menu-item-3{
+
+   .menu-img{
+      margin-left: 31px;
+      margin-right: 67px;
+      position: relative;
+      z-index: 50;
+      @include variable.mq(tab){
+         margin-left: 17px;
+         margin-right: 28px;
+      }
+      @include variable.mq(){
+         margin: 0;
+      }
+   }
+   .menu-text{
+      position: relative;
+      margin-top: -74px;
+      @include variable.mq(){
+         margin-top: -56px;
+      }
+   }
+}
+
+.menu-name{
+   font-size: 30px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   @include variable.mq(tab){
+      font-size: 24px;
+   }
+   @include variable.mq(){
+      font-size: 18px;
+      margin-bottom: 16px;
+   }
+}
+
+.menu-price{
+   font-size: 18px;
+   margin-bottom: 20px;
+   letter-spacing: .1em;
+   @include variable.mq(){
+      font-size: 12px;
+   }
+   span{
+      font-family: variable.$font-en1;
+      font-size: 24px;
+      @include variable.mq(){
+         font-size: 18px;
+      }
+      strong{
+         font-size: 40px;
+         @include variable.mq(){
+            font-size: 30px;
+         }
+      }
+   }
+}
+
+.menu-info{
+   font-size: 24px;
+   @include variable.mq(tab){
+      font-size: 16px;
+   }
+   @include variable.mq(){
+      font-size: 14px;
+   }
+}
+
+
+.menu-insta{
+   background-color: #fff;
+   padding: 13px;
+   position: relative;
+   width: 100%;
+   max-width: 1080px;
+   margin: 0 auto;
+   text-align: center;
+   @include variable.mq(){
+      padding: 10px;
+   }
+   .menu-tag{
+      position: absolute;
+      background-color: variable.$key-color;
+      font-family: variable.$font-en1;
+      font-size: 30px;
+      color: #fff;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 18px 107px;
+      line-height: 1.44;
+      z-index: 30;
+      @include variable.mq(){
+         font-size: 24px;
+         padding: 10px 34px;
+      }
+   }
+}
+
+.insta-wrapper{
+   width: 100%;
+   height: 100%;
+   border: 1px solid variable.$text;
+   padding: 148px 33px 24px;
+   @include variable.mq(tab){
+      padding-top: 120px;
+   }
+
+   @include variable.mq(){
+      padding: 64px 10px 24px;
+   }
+}
+.insta-text{
+   font-size: 18px;
+   position: relative;
+   margin-bottom: 34px;
+   @include variable.mq(tab){
+      font-size: 16px;
+   }
+   @include variable.mq(){
+      font-size: 16px;
+      margin-bottom: 24px;
+      text-align: left;
+   }
+   span{
+      position: relative;
+      &::before, &::after{
+         position: absolute;
+         content: "";
+         width: 34px;
+         height: 1px;
+         background-color: variable.$text;
+         top: 50%;
+         transform: translateY(-50%) rotate(54deg);
+         @include variable.mq(){
+            display: none;
+         }
+      }
+      &::before{
+         left: -36px;
+
+      }
+      &::after{
+         right: -36px;
+         transform: translateY(-50%) rotate(-54deg);
+      }
+   }
+}
+
+.insta-imgs-wrapper{
+   width: 100%;
+   overflow-x: scroll;
+}
+
+.insta-imgs{
+   display: flex;
+   gap: 16px;
+   margin-bottom: 8px;
+   width: 972px;
+   @include variable.mq(){
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+   }
+
+   li{
+      width: 231px;
+      height: 231px;
+      @include variable.mq(){
+         width: calc((100% - 10px) / 2);
+         height: auto;
+      }
+   }
+}
+
+.insta-id{
+   margin-bottom: 26px;
+   font-size: 18px;
+   @include variable.mq(){
+      font-size: 16px;
+   }
+}
+
+.insta-btn{
+   height: 56px;
+   a{
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 77px 16px 58px;
+      border: 1px solid variable.$text;
+      position: relative;
+      transition: all .3s;
+      @include variable.mq(){
+         width: 100%;
+         text-align: center;
+         padding: 16px 0;
+      }
+
+      &:hover{
+         background-color: variable.$text;
+         color: #fff;
+         &::after{
+            background: url(../img/btn_white.svg);
+            background-size: contain;
+
+         }
+      }
+      &::after{
+         position: absolute;
+         content: "";
+         width: 16px;
+         height: 16px;
+         background: url(../img/btn.svg);
+         background-size: contain;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 37px;
+         transform: all .3s;
+      }
+   }
+}

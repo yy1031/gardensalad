@@ -1,0 +1,64 @@
+@use "variable";
+
+footer{
+   text-align: center;
+   padding: 56px 0 9px;
+   position: relative;
+}
+
+.footer-sns{
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   margin-bottom: 40px;
+   a{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: variable.$base-color;
+      border-radius: 40px;
+      font-size: 25px;
+      color: #fff;
+      transition: all .3s;
+      &:hover{
+         background-color: variable.$main-color;
+         border: 2px solid variable.$base-color;
+         color: variable.$base-color;
+      }
+   }
+}
+
+.footer-nav{
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   margin-bottom: 43px;
+   @include variable.mq(){
+      gap: 32px;
+   }
+}
+
+.footer-nav-item{
+   a{
+      font-family: variable.$font-en1;
+      font-size: 18px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      padding-bottom: 5px;
+      &:hover{
+         border-bottom: 2px solid variable.$key-color;
+      }
+   }
+}
+
+.footer-logo{
+   width: 165px;
+   margin-bottom: 22px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.copyright{
+   font-size: 12px;
+}
+

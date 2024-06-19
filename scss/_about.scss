@@ -1,0 +1,124 @@
+@use "variable";
+
+.about{
+   background-color: variable.$main-color;
+   padding-top: 130px;
+   padding-bottom: 150px;
+   @include variable.mq(tab){
+      padding: 90px 0;
+   }
+   @include variable.mq(){
+      padding: 64px 0;
+   }
+}
+.about-list{
+   margin-top: 80px;
+   @include variable.mq(){
+      margin-top: 56px;
+   }
+}
+
+.about-item{
+   display: flex;
+   gap: 70px;
+   height: 288px;
+   @include variable.mq(tab){
+      gap: 32px;
+      height: 240px;
+   }
+   @include variable.mq(){
+      display: block;
+      height: auto;
+   }
+   & + & {
+      margin-top: 64px;
+      @include variable.mq(){
+         margin-top: 56px;
+      }
+   }
+}
+.about-img{
+   width: calc(450 / 1080 * 100%);
+   height: 100%;
+   img{
+      object-fit: cover;
+   }
+   @include variable.mq(tab){
+      width: 37.66%;
+   }
+   @include variable.mq(){
+      width: 100%;
+      height: auto;
+   }
+}
+.about-text{
+   width: calc(560 / 1080 * 100%);
+   height: 100%;
+   font-size: 18px;
+   line-height: 1.5;
+   position: relative;
+   p{
+      width: 400px;
+      max-width: 100%;
+   }
+   @include variable.mq(tab){
+      width: 57.85%;
+   }
+   @include variable.mq(){
+      width: 100%;
+      height: auto;
+      font-size: 16px;
+      padding-bottom: 32px;
+      background-size: 183px auto !important;
+      p{
+         width: 100%;
+      }
+   }
+}
+
+.about-text-inner{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 100%;
+   @include variable.mq(){
+      position: static;
+      transform: translateY(0);
+   }
+}
+.about-title{
+   font-weight: 700;
+   font-size: 30px;
+   margin-bottom: 24px;
+   width: 440px;
+   max-width: 100%;
+   @include variable.mq(tab){
+      font-size: 27px;
+   }
+   @include variable.mq(){
+      font-size: 24px;
+      margin-bottom: 16px;
+      width: 100%;
+   }
+   span{
+      color: variable.$key-color;
+   }
+}
+.about-item-1{
+   flex-direction: row-reverse;
+   .about-text{
+      background: url(../img/01.svg) no-repeat right center;
+   }
+
+}
+.about-item-2{
+   .about-text{
+      background: url(../img/02.svg) no-repeat right center;
+   }
+}
+.about-item-3{
+   flex-direction: row-reverse;
+   .about-text{
+      background: url(../img/03.svg) no-repeat right center;
+   }
+}

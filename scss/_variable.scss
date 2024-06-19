@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+JP:wght@400;500;700&family=Satisfy&display=swap');
+
+$font-en1: 'Josefin Sans', sans-serif;
+$font-en2: 'Satisfy', cursive;
+$font-ja: 'Noto Sans JP', sans-serif;
+
+$base-color: #2F2F2F;
+$main-color: #F2F2F2;
+$key-color: #159741;
+
+$text: #333;
+
+$breakpoints: (
+  'sp': "(max-width: 767px)",
+  'tab': "(min-width: 768px) and (max-width:1279px)",
+  'pc': "(min-width: 1280px)"
+) !default;
+
+@mixin mq($breakpoint: sp) {
+		@media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
